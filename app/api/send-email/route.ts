@@ -13,8 +13,8 @@ export const POST = async (req: NextRequest) => {
       port: 465,
       secure: true,
       auth: {
-        user: "info@thenewtonhomes.com",
-        pass: "Looking@1996",
+        user: process.env.NEXT_PUBLIC_SMTP_EMAIL as string,
+        pass: process.env.NEXT_PUBLIC_SMTP_PASSWORD as string,
       },
     });
 
